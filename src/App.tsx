@@ -90,10 +90,11 @@ export default function App() {
       const opened = await openPdf(stored.data);
       if (cancelled) { await opened.destroy(); return; }
       documentRef.current = opened;
-      setTotalPages(opened.numPages);
       await refreshNotes(activeId);
       const progress = await getProgress(activeId);
+      // Restore saved position before exposing the new document to the page reader.
       setPage(Math.min(opened.numPages, Math.max(1, progress?.page ?? 1)));
+      setTotalPages(opened.numPages);
       setParagraphs([]);
       setQuote('');
       setComment('');
