@@ -1,0 +1,14 @@
+{
+  "name": "Margen — Asistente de lectura francesa",
+  "short_name": "Margen",
+  "description": "Lee en francés, traduce y guarda anotaciones",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f8f6",
+  "theme_color": "#172a40",
+  "lang": "es",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
